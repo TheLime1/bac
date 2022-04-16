@@ -1,6 +1,6 @@
 # devoirat bac / exercices 
 
-decimal conv : https://github.com/TheLime03/dec-converter
+bac list  : https://github.com/stars/TheLime03/lists/bac
 
 
 add img to files
