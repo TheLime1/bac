@@ -1,22 +1,21 @@
 <?php
-mysql_connect("localhost","root","");
-mysql_select_db('location_22');
-$imat=$_POST['nums'].'TU'.$_POST['numenre'];
+mysql_connect("localhost", "root", "") or die("Unable to connect to database");
+mysql_select_db("location_22") or die("Unable to select database");
 
-$req="select * from voiture where imat='$imat' ";
-$res=mysql_query($req);
-if(mysql_num_rows($res)==0)
-echo("voiture inexistante");
-else{
-    $req1="select * from voiture where imat='$imat' and disponible='D' ";
-    $res1=mysql_query($req1);
-    if(mysql_num_rows($res1)!=0)
-    echo("attention ! verifier le numero d'immatriculation de la voiture");
-    else{
-        $req2="update voiture set disponible='D' where imat='$imat'";
-        $res2=mysql_query($req2);
-        $req3="update louer set date_ret=Now() where imat='$imat'";
-        $res3=mysql_query($req3);
-        echo("retour enregistreé avec succees");
-}}
+$num=$_POST['serie'].'TU'.$_POST['num'];
+$req=mysql_query("SELECT * FROM voiture where imat=$num);
+if(mysql_num_rows($req)==0)
+    echo('votre voiture iniixiixi');
+else
+{$r2=mysql_query("select * from voiture where imat='$m' and 
+disponible='D'");
+if(mysql_num_rows($r2)!=0)
+echo("<h1>Attention! Verifier le numero dimmatriculation de la 
+Voiture");
+else
+{$r3=mysql_query("update voiture set disponible='D' where 
+imat='$m'");
+$r4=mysql_query("update louer set dateret=now() where imat='$m'");
+echo("<h1>Retour enregistre avec succes");}
+
 ?>
