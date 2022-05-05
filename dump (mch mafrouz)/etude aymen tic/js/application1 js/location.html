@@ -1,0 +1,61 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="location.js"></script>
+</head>
+<body>
+    <form action="location.php" name="f1" method="post"><table>
+<tr>
+    <td>nomprénom</td>
+    <td><input type="text" id="t1" onkeyup="majus()" onblur="verifnp()"></td>
+</tr>
+<tr>
+    <td>age</td>
+    <td><input type="number" id="age" ></td>
+</tr>
+<tr>
+    <td>cin</td>
+    <td><input type="text" id="cin" onblur="verifcin()">
+</tr>
+<tr>
+    <td>adresse mail</td>
+    <td><input type="email" id="mail" >
+</tr>
+<tr>
+    <td>mdp</td>
+    <td><input type="password" id="mdp" onfocus="colorap()">
+</tr>
+<tr>
+    <td><select size="3" id="m"><option value="rien">choisissez une marque</option>
+    <option value="fiat">fiat500</option>
+    <option value="renault">renaultclio</option></select></td>    <td></td>
+</tr>
+<tr>
+    <td>nombre dejours
+     </td>
+    <td><input type="radio"name="r1">1jour
+        <input type="radio"name="r1">3jours<input type="radio"name="r1">5jours
+
+    </td>
+</tr>
+<tr>
+    <td>options souhaitéées</td>
+    <td><input type="checkbox"id="c1">climatiseur<input type="checkbox"id="c1">poste mp3  </td>
+</tr>
+<tr><td><input type="button" value="Génerer code" onclick="codedevis()"></td>
+    <td><input type="submit" value="calculer devis" onclick="Calculerdevis()"></td>
+    <td><input type="reset" value="recommencer"></td>
+</tr>
+
+
+
+
+</table>
+
+    </form>
+</body>
+</html>

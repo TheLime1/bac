@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajout</title>
+    <script src="controle.js"></script>
+</head>
+<body bgcolor="red"><center>
+    <h1>Ajouter un offre</h1>
+    <form >
+    <table>
+        <tr>
+            <td>cin</td>
+            <td> <input type="text" name="" id="cin"> </td>
+        </tr>
+        <tr>
+            <td>pseudo</td>
+            <td><input type="text" name="" id="ps"></td>
+        </tr>
+        <tr>
+            <td>tel</td>
+            <td><input type="tel" name="" id="tel"></td>
+        </tr>
+        <tr>
+            <td>mail</td>
+            <td><input type="email" name="" id="m"></td>
+        </tr>
+        <tr>
+            <td>objet</td>
+            <td>
+                <select id="ob" size="4">
+                    <option value="rien">choisir un objet</option>
+                    <option value="500">les gant de attouga</option>
+                    <option value="100">les maillot de ben rkhissa</option>
+                    <option value="400">les crmpons de dhieb</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </td>
+        </tr>
+        <tr>
+            <td>prix propose</td>
+            <td><input type="text" name="" id="prix" onblur="verif()"></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="b" id=""> carte bancaire</td>
+            <td><input type="radio" name="b" id=""> cheque <input type="radio" name="b" id="">virement</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="" id="ch">j'accepte les termes du contrat</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="reset" value="rennoncer"><input type="submit" value="encherir" onclick="offre()"></td>
+        </tr>
+    </table>
+</form>
+</center>
+
+    
+</body>
+</html>
