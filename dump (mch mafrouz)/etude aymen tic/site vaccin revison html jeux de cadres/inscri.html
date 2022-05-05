@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Inscription</title>
+	<link rel="stylesheet" type="text/css" href="styleins.css">
+</head>
+<body>
+	<header>
+		<table>
+			<tr>
+			<th><img src="logo.png" id="logo" height=200  width="400"></th>
+		   <th>
+		<span class="clignote"> contactez votre pharmacie la plus proche et profitez de votre dose de vaccin!!!</span></th>
+		<th> <img src="pp.png" width="100" height="100"></th>
+		</tr>
+	</table>
+	</header>
+	<H1>REMPLISSEZ ATTENTIVEMENT LE FORMULAIRE SVP: </H1>
+
+<form>
+		<div>
+			<label>NUM CIN : </label> 
+			<input type="text" readonly pattern="[0-9]{8}" maxlength="8" placeholder="8 chiffres" > 
+		</div>
+		<div>
+			<label>NOM : </label> 
+			<input type="text" size="30" required > 
+		</div>
+
+		<div> 
+			<label>PRENOM: </label> 
+			<input type="text" size="30" required> 
+		</div>
+		<div> 
+			<label>DATE DE NAISSANCE: </label> 
+			<input type="date" value="20/11/2020" required> 
+		</div>
+
+		<fieldset>
+			<legend>SEXE:</legend>
+			<input type="radio" name="R1" checked required> Homme       
+			<input type="radio" name="R1" required> Femme
+		</fieldset>
+		<div> 
+			<label>TELEPHONE: </label> 
+			<input type="tel" value="00216"  maxlength="13" required> 
+		</div>
+		<div> 
+			<label>EMAIL: </label> 
+			<input type="email" placeholder ="____@___ .___" required> 
+		</div>
+		<div> 
+			<label>Gouvernorat: </label> 
+			<select> 
+				<option> Tunis</option>
+				<option> Bizerte</option>
+				<option> Nabeul</option>
+				<option> Zaghouan</option>
+			</select>
+		</div>
+		<div> 
+			<label>ADRESSE: </label> 
+			<textarea> ecrivez ici....</textarea>
+		</div>
+		<div> 
+			<label>CODE POSTAL: </label> 
+			<input type="text"  >
+		</div>
+		
+
+	<fieldset >
+			<legend>EST CE QUE VOUS SOUFFREZ DE? :</legend>
+			<input type="checkbox"  name= "C1"  class="mode"> maladies cardiaques
+ 			 <input type="checkbox" name= "C2" class="mode"> Diabete
+ 			 <input type="checkbox" name= "C3"  class="mode"> Grossesse    
+ 			 <input type="checkbox" class="mode"> maladies respiratoires
+			  <input type="checkbox" class="mode"> autres maladies chroniques
+			  <input type="checkbox"
+ 			 <br> Indiquez les:  <input type="text"  >
+	</fieldset>
+
+		<div>
+			<label>VACCIN PREFERE: </label>   <!-- essayez de comprendre comment fonctionne datalist , il faut ecrire le code comme ca sinon ca fonctionne pas-->
+		<input list="vac">
+ 		<datalist id="vac">
+ 			<option> PFIZER </option>
+			<option> SINOVAC </option>
+			<option> ASTRA ZENECA </option>
+			<option> JANSSEN </option>
+			<option> MODERNA </option>
+ 		</datalist>
+ 		</div>
+
+         <div> 
+			<label>DOSE NUMERO: </label> 
+			<input type="number"  min="1"  max="2"  step="1" >
+		</div>
+		<fieldset>
+			<legend>EST CE QUE VOUS VOULEZ QU'ON VOUS A ENVOYE DES NOTIFICATIONS concernant le vaccin?:</legend>
+			<input type="radio" checked > OUI      
+			<input type="radio" required> NON
+		</fieldset>
+		
+		<div>
+			<label> COULEUR DE VOTRE CARNET CNAM:</label>
+			<input type="color">
+		</div>
+		
+
+
+		<div>
+			<label> MOT DE PASSE:</label>
+			<input type="password">
+		</div>
+ 		<br>	 
+ 		<div>
+ 			<input type="reset" value="ANNULER"> 
+ 			<input type="submit" value="VALIDER"> 
+ 		</div>
+</form>
+<img src="vaccin5.png">
+</body>
+</html>

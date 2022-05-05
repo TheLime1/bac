@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="calcul.js"></script>
+</head>
+<body>
+    <form action="calcul.php" name="f1" method="post"><table>
+<tr>
+    <td>valeur1</td>
+    <td><input type="text" id="t1" ></td>
+</tr>
+<tr>
+    <td>valeur2</td>
+    <td><input type="text" id="t2" ></td>
+</tr>
+<tr>
+    <td>choix operation
+     </td>
+    <td><input type="radio"name="r1" id="som" value="+">somme
+        <input type="radio"name="r1" id="sous" value="-">soustraction
+        <input type="radio" value="*" name="r1" id="mul">multiplication
+        <input type="radio"name="r1" id="div" value="/">division
+
+    </td>
+</tr>
+<tr>
+    <td>formule</td>
+    <td><input type="text" id="ope"onfocus="calcula()">
+</tr>
+<tr>
+<tr>
+    <td>resultat</td>
+    <td><input type="text" id="res" >
+</tr>
+<tr>
+    <td><select size="4" id="op" onchange="calc()">
+    <option value="+">somme</option>
+    <option value="-">soustaction</option>
+    <option value="*">multiplication</option>
+    <option value="/">division</option>
+</select></td>    <td></td>
+</tr>
+
+<tr>
+    <td>resultat forme entier</td>
+    <td><input type="text" id="t3" ></td>
+</tr>
+<tr>
+    <td>resultat forme reel</td>
+    <td><input type="text" id="t4" ></td>
+</tr>
+<tr><td><input type="button" value="convertir" onclick="conv()"></td>
+    <td><input type="submit" value="longeur chiffre" ></td>
+    <td><input type="reset" value="recommencer"></td>
+</tr>
+
+
+
+
+</table>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+
+<head>
+
+<script src="cont.js"></script>
+</head>
+
+<body onload="generercaptcha()">
+
+<h1>Evaluation d'un hotel</h1>
+<form method="POST" name="f" action="evaluation.php" onSubmit="return verif()">
+	<table width="100%"  border="1">
+      <tr>
+        <td>Hotel:</td>
+        <td><select name="idhotel" id="idhotel" style="width: 184px">
+            <option selected="">choisir un hotel</option>
+            <option value="10">5 Stars</option>
+            <option value="20">Globe</option>
+            <option value="30">The Sun</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td>Accueil:</td>
+        <td><span class="auto-style5">
+          <input name="noteaccueil" id="r1" type="radio" value="3" style="width: 20px">
+      Tres Satisfaisant
+      <input name="noteaccueil" id="r2" type="radio" value="2">
+      Satisfaisant
+      <input name="noteaccueil"  id="r3" type="radio" value="1">
+&nbsp;Peu Satisfaisant</span></td>
+      </tr>
+      <tr>
+        <td>restauration:</td>
+        <td><span class="auto-style5">
+          <input name="noterest" id="r4" type="radio" value="3" style="width: 20px">
+Tres Satisfaisant
+<input name="noterest" id="r5" type="radio" value="2">
+Satisfaisant
+<input name="noterest" id="r6" type="radio" value="1">
+&nbsp;Peu Satisfaisant</span></td>
+      </tr>
+      <tr>
+        <td>extra</td>
+        <td><span class="auto-style5">
+          <input name="extra1" type="checkbox" id="extra1" style="width: 20px; height: 20px;" value="4">
+&nbsp;Piscine couverte<br>
+      <input name="extra2" type="checkbox" id="extra2" style="width: 20px; " value="2">
+      Plage Priv&eacute;e<br>
+      <input name="extra3" type="checkbox" id="extra3" style="width: 20px" value="1">
+      Couverture Wifi</span></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><div align="right">captcha:
+            <input name="code" id="code" type="text">
+          <input name="Actualiser2" type="button" value="Actualiser" onclick="generercaptcha()">
+        </div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><div align="right">Combien de lettres majuscules dans la zone Captche</div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><div align="right">R&eacute;ponse:
+            <input name="reponse" id="reponse" type="text">
+        </div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;
+            <input name="reset" type="reset" value="Annuler">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input name="submit" type="submit" value="Valider"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+	<p align="center">&nbsp;</p>
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+
+</html>

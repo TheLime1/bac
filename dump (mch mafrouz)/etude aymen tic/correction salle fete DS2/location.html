@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="location.js"></script>
+</head>
+<body>
+<form method="POST" action="location.php">
+numéro client<input type="text" name="numc" id="numc" required><br>
+nom du client<input type="text" name="nomc" id="nomc"><br>
+prénom du client <input type="text" name="prec" id="prec"><br>
+téléphone<input type="tel" name="tel" id="tel"><br>
+adresse mail<input type="mail" name="ml" id="ml"><br>
+date évenement <input type="date" name="de" id="de" required> <br>
+heure évenement <input type="time" name="he" id="he"> <br>
+choix salle <select name="salle">
+                    <option value="1">salle perle</option>
+                    <option value="2">salle emraude</option>
+                    <option value="3">salle royale</option>
+            </select>
+<fieldset> <legend>services supplémentaires</legend>
+    serveurs<input type="checkbox" value="5" name="s" id="s">
+    photographe<input type="checkbox" value="10" name="ph" id="ph">
+</fieldset>
+nombre personne <input type="number" name="" id="nbp" ><br>
+<input type="reset" value="annuler"><input type="submit"   value="valider" onclick="calculSupp()" >
+<input  type="hidden" name="ps" id="ps" value="">
+
+
+
+
+</form>
+</body>
+</html>
