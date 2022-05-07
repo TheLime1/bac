@@ -14,7 +14,7 @@ def ConvBinDec(Bin):
 
 def traitement(f1):
     ch = "t"
-    for i in range(4):
+    while ch != "":
         ch = f1.readline()
         ch = ch[:-1]
         n = 8
