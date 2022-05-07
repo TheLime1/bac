@@ -1,30 +1,45 @@
+''' Calcul arithmétique - Conversion d'un nombre binaire (Base 2) en
+nombre décimal (Base 10)  - Prof. Yassine Ben Salah '''
 
-# Calcul arithmétique - Divisiblité par 3 - Prof. Yassine Ben Salah
+# Module permet de saisir un nombre binaire
 
-# Module permet de saisir un entier positif Nb
+
 def Saisir():
-    valide = False
-    while valide == False:
-        Nb = int(input('Saisir Nb : '))
-        valide = (Nb >= 0)
-    return Nb
+    Valide = False
+    while Valide == False:
+        Bin = int(input('Saisir un nombre binaire : '))
+        Valide = Verif(Bin)
+    return Bin
 
-# Module permet de de vérifier si un entier Nb est divisible par 3
+# Module permet de vérifier si Bin est un nombre binaire
 
 
-def DIV3(Nb):
-    Ch = str(Nb)
-    Som = 0
-    for i in range(len(Ch)):
-        c = int(Ch[i])
-        Som = Som + c
+def Verif(Bin):
+    ch = str(Bin)
+    i = 0
+    ok = True
+    while (ok == True) and (i <= len(ch)-1):
+        if not (ch[i] in ['0', '1']):
+            ok = False
+        else:
+            i = i+1
+    return ok
 
-    return Som % 3 == 0
+# Module permet de convertir un nombre binaire en nombre décimal
+
+
+def ConvBinDec(Bin):
+    BinCh = str(Bin)
+    Dec = 0
+    P = 1
+    for i in range(len(BinCh)-1, -1, -1):
+        Dec = Dec + int(BinCh[i]) * P
+        P = 2 * P
+    return Dec
 
 
 # Programme principal : Appel des modules
-Nb = Saisir()
-if DIV3(Nb):
-    print(Nb, 'est divisible par 3')
-else:
-    print(Nb, 'est non divisible par 3')
+Bin = Saisir()
+print(Bin, '(Base 2) =', ConvBinDec(Bin), '(Base 10)')
+
+# Prof. Yassine Ben Salah
