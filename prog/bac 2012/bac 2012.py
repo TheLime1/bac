@@ -1,5 +1,3 @@
-
-
 def decrypte(x):
     return chr(x)
 
@@ -14,7 +12,7 @@ def ConvBinDec(Bin):
     return Dec
 
 
-def lire(f1):
+def traitement(f1):
     ch = "t"
     for i in range(4):
         ch = f1.readline()
@@ -29,4 +27,5 @@ def lire(f1):
 
 # PP
 f1 = open("msgcrypt.txt", "r")
-lire(f1)
+traitement(f1)
+f1.close()
