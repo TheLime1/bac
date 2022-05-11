@@ -1,31 +1,37 @@
-def decrypte(x):
-    return chr(x)
+def binair(ch):
+    s = 0
+    p = 1
+    j = len(ch)-1
+    for i in range(len(ch)):
+        k = int(ch[j])
+        j = j-1
+        s = s+p*k
+        p = p*2
+    return s
 
 
-def ConvBinDec(Bin):
-    BinCh = str(Bin)
-    Dec = 0
-    P = 1
-    for i in range(len(BinCh)-1, -1, -1):
-        Dec = Dec + int(BinCh[i]) * P
-        P = 2 * P
-    return Dec
+def cry(ch):
+    i = 0
+    res = ""
+    while (i < len(ch)):
+        k = binair(ch[i:i+8])
+        i = i+8
+        res = res+chr(k)
+    return res
 
 
-def traitement(f1):
-    ch = "t"
-    while ch != "":
-        ch = f1.readline()
-        ch = ch[:-1]
-        n = 8
-        spl = [ch[i: i + n] for i in range(0, len(ch), n)]
-        for i in range(len(spl)):
-            txt = decrypte(ConvBinDec(spl[i]))
-            print(txt, end='')
-        print("", end=' ')
+def cryptage(f):
+    res = ""
+    ch = f.readline()
+    k = cry(ch[0:len(ch)-1])
+    res = res+k+" "
+    while not (ch == ""):
+        ch = f.readline()
+        k = cry(ch[0:len(ch)-1])
+        res = res+k+" "
+    print(res)
+    f.close()
 
 
-# PP
-f1 = open("msgcrypt.txt", "r")
-traitement(f1)
-f1.close()
+f = open("mscrypt.txt", "r")
+cryptage(f)
